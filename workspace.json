@@ -2,6 +2,7 @@
   "$schema": "./node_modules/nx/schemas/workspace-schema.json",
   "version": 2,
   "projects": {
-    "pbmh-components": "libs/pbmh-components"
+    "pbmh-components": "libs/pbmh-components",
+    "pbmh-components-e2e": "apps/pbmh-components-e2e"
   }
 }

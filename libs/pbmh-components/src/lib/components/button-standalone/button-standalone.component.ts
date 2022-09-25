@@ -1,13 +1,19 @@
-import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
-
+import {
+  ChangeDetectionStrategy,
+  Component,
+  Input,
+  OnInit,
+} from '@angular/core';
 @Component({
-  selector: 'pbmh-button-standalone',
-  template: ` <p>button-standalone works!</p> `,
-  styles: [],
+  selector: '[pbmh-button-standalone]',
+  template: ` <ng-content></ng-content> `,
+  styleUrls: ['../button/button.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
+  host: {
+    '[class.pbmh-primary]': 'color === "primary"',
+    '[class.pbmh-secondary]': 'color === "secondary"',
+  },
 })
-export class ButtonStandaloneComponent implements OnInit {
-  constructor() {}
-
-  ngOnInit(): void {}
+export class ButtonStandaloneComponent {
+  @Input() color: 'primary' | 'secondary' = 'primary';
 }

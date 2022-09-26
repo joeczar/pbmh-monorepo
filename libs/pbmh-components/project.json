@@ -66,6 +66,19 @@
           "quiet": true
         }
       }
+    },
+    "compodoc": {
+      "executor": "@twittwer/compodoc:compodoc",
+      "options": {
+        "tsConfig": "libs/pbmh-components/tsconfig.compodoc.json",
+        "outputPath": "dist/compodoc/pbmh-components",
+        "workspaceDocs": true
+      },
+      "configurations": {
+        "json": {
+          "exportFormat": "json"
+        }
+      }
     }
   },
   "tags": []
